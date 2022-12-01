@@ -25,6 +25,13 @@ source-repository head
 
 library
   exposed-modules:
+      Data.Algorithm.PP.Utils.List
+      Data.Algorithm.PP.Utils.List.Basic
+      Data.Algorithm.PP.Utils.List.Combinatorics
+      Data.Algorithm.PP.Utils.List.Reversal
+      Data.Algorithm.PP.Utils.List.Safe
+      Data.Algorithm.PP.Utils.List.Shuffle
+      Data.Algorithm.PP.Utils.List.Split
       Lib
   other-modules:
       Paths_pp
