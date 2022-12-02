@@ -26,16 +26,20 @@ source-repository head
 library
   exposed-modules:
       Data.Algorithm.PP.Perm
+      Data.Algorithm.PP.Perm.Bijection
+      Data.Algorithm.PP.Perm.Bijection.Trivial
       Data.Algorithm.PP.Perm.Generator
       Data.Algorithm.PP.Perm.Generator.Basic
-      Data.Algorithm.PP.Perm.Inner
+      Data.Algorithm.PP.Perm.Rank
   other-modules:
       Paths_pp
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
-      base >=4.7 && <5
+      array >=0.5
+    , base >=4.7 && <5
+    , random >=1.1
     , vector >=0.12
   default-language: Haskell2010
 
@@ -47,8 +51,10 @@ executable pp-exe
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array >=0.5
+    , base >=4.7 && <5
     , pp
+    , random >=1.1
     , vector >=0.12
   default-language: Haskell2010
 
@@ -61,7 +67,9 @@ test-suite pp-test
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      array >=0.5
+    , base >=4.7 && <5
     , pp
+    , random >=1.1
     , vector >=0.12
   default-language: Haskell2010
