@@ -45,6 +45,8 @@ library:
     - Data.Algorithm.PP.Perm.Bijection.Trivial
     - Data.Algorithm.PP.Perm.Generator
     - Data.Algorithm.PP.Perm.Generator.Basic
+    - Data.Algorithm.PP.Perm.Property
+    - Data.Algorithm.PP.Perm.Property.Basic
     - Data.Algorithm.PP.Perm.Rank
 
 executables:

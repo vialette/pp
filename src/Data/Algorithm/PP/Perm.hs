@@ -13,6 +13,7 @@ module Data.Algorithm.PP.Perm (
 
   -- * 
 , toList
+, toIdxList
 ) where
 
 import Prelude hiding (length, null)
@@ -23,7 +24,6 @@ import           Data.Function (on)
 import qualified Data.List     as L
 import qualified Data.Vector   as V
 import qualified Data.Tuple    as T
-
 
 type TPerm = Int
 
@@ -46,6 +46,9 @@ reduce = L.map T.fst . L.sortBy g . L.zip [1..] . L.sortBy f . L.zip [1..]
 
 toList :: Perm -> [TPerm]
 toList = V.toList . toVector
+
+toIdxList :: Perm -> [(Int, TPerm)]
+toIdxList = L.zip [1..] . toList
 
 length :: Perm -> Int 
 length = V.length . toVector

@@ -30,8 +30,12 @@ library
       Data.Algorithm.PP.Perm.Bijection.Trivial
       Data.Algorithm.PP.Perm.Generator
       Data.Algorithm.PP.Perm.Generator.Basic
+      Data.Algorithm.PP.Perm.Property
+      Data.Algorithm.PP.Perm.Property.Basic
       Data.Algorithm.PP.Perm.Rank
   other-modules:
+      Data.Algorithm.PP.Perm.Property.Alternating
+      Data.Algorithm.PP.Perm.Property.Parity
       Paths_pp
   hs-source-dirs:
       src
