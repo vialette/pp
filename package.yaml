@@ -22,7 +22,7 @@ description:         Please see the README on GitHub at <https://github.com/gith
 dependencies:
 - base >= 4.7 && < 5
 - vector >= 0.12
-- pp-utils-list >= 0.1
+# - pp-utils-list >= 0.1
 
 ghc-options:
 - -Wall
@@ -39,6 +39,8 @@ library:
   source-dirs: src
   exposed-modules:
     - Data.Algorithm.PP.Perm
+    - Data.Algorithm.PP.Perm.Generator
+    - Data.Algorithm.PP.Perm.Generator.Basic
     - Data.Algorithm.PP.Perm.Inner
 
 executables:

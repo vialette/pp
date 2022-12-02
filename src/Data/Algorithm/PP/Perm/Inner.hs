@@ -5,9 +5,11 @@ module Data.Algorithm.PP.Perm.Inner (
   -- * Making
 , mk
 , mkId
+
+
 ) where
 
-import           Control.Arrow (&&&)
+import           Control.Arrow ( (&&&) )
 import qualified Data.Foldable as F
 import           Data.Function (on)
 import qualified Data.List     as L
@@ -19,11 +21,13 @@ newtype PermInner a = PermInner { elements :: V.Vector a }
 instance (Show a) => Show (PermInner a) where
   show = show . V.toList . elements
 
-dup x = (x, x)
 
-nextPerm = F.foldr f Nothing . L.zip . second L.tail . dup . L.zip [1..] . V.toList . elements
-  where
-    f ((i, xi), (j, xj)) Nothing = if xi < xj then Just i else Nothing
+
+-- dup x = (x, x)
+
+-- nextPerm = F.foldr f Nothing . L.zip . second L.tail . dup . L.zip [1..] . V.toList . elements
+--   where
+--     f ((i, xi), (j, xj)) Nothing = if xi < xj then Just i else Nothing
 
 mk :: (Foldable t, Ord a, Num b, Enum b) => t a -> PermInner b
 mk = PermInner . V.fromList . reduce . F.toList

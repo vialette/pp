@@ -26,6 +26,8 @@ source-repository head
 library
   exposed-modules:
       Data.Algorithm.PP.Perm
+      Data.Algorithm.PP.Perm.Generator
+      Data.Algorithm.PP.Perm.Generator.Basic
       Data.Algorithm.PP.Perm.Inner
   other-modules:
       Paths_pp
@@ -34,7 +36,6 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
-    , pp-utils-list >=0.1
     , vector >=0.12
   default-language: Haskell2010
 
@@ -48,7 +49,6 @@ executable pp-exe
   build-depends:
       base >=4.7 && <5
     , pp
-    , pp-utils-list >=0.1
     , vector >=0.12
   default-language: Haskell2010
 
@@ -63,6 +63,5 @@ test-suite pp-test
   build-depends:
       base >=4.7 && <5
     , pp
-    , pp-utils-list >=0.1
     , vector >=0.12
   default-language: Haskell2010
